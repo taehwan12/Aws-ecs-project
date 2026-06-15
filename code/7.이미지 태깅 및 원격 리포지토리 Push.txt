@@ -1,0 +1,9 @@
+# v1 이미지 가상 레지스트리 주소로 테깅
+docker tag ecs-nginx:v1 $AWS_ACCOUNT_ID.dkr.ecr.$REGION.amazonaws.com/ecs-nginx:v1
+
+# v2 이미지 가상 레지스트리 주소로 테깅
+docker tag ecs-nginx:v2 $AWS_ACCOUNT_ID.dkr.ecr.$REGION.amazonaws.com/ecs-nginx:v2
+
+# 원격 ECR Private 리포지토리로 전송
+docker push $AWS_ACCOUNT_ID.dkr.ecr.$REGION.amazonaws.com/ecs-nginx:v1
+docker push $AWS_ACCOUNT_ID.dkr.ecr.$REGION.amazonaws.com/ecs-nginx:v2

@@ -1,0 +1,6 @@
+# AWS 계정 ID 변수 지정 (본인 계정 번호로 대체 가능)
+AWS_ACCOUNT_ID=$(aws sts get-caller-identity --query "Account" --output text)
+REGION="ap-northeast-2"
+
+# ECR 인증 암호 획득 후 Docker login 연동
+aws ecr get-login-password --region $REGION | docker login --username AWS --password-stdin $AWS_ACCOUNT_ID.dkr.ecr.$REGION.amazonaws.com

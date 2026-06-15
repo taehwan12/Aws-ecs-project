@@ -1,0 +1,13 @@
+# 시스템 패키지 최업데이트
+sudo apt-get update && sudo apt-get upgrade -y
+
+# AWS CLI 설치를 위한 unzip 도구 다운로드
+sudo apt-get install unzip curl -y
+
+# AWS CLI v2 가압축 파일 다운로드 및 설치
+curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+unzip awscliv2.zip
+sudo ./aws/install
+
+# 설치 버전 확인
+aws --version

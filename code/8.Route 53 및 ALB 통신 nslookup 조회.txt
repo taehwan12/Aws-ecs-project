@@ -1,0 +1,5 @@
+# Route 53 도메인 가입 네임서버 포워딩 정상 질의 확인
+nslookup rmsid.store
+
+# 별칭(Alias) 처리된 www 서브도메인 및 Load Balancer 연결 질의 확인
+nslookup www.rmsid.store
